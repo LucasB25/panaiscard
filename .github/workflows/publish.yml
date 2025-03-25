@@ -20,14 +20,14 @@ jobs:
 
       - name: Install dependencies
         run: npm i
-        working-directory: src
+        working-directory: .
 
       - name: Build package
         run: npm run build
-        working-directory: src
+        working-directory: .
 
       - name: Publish to npm
         run: npm publish --access public
-        working-directory: src
+        working-directory: .
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
