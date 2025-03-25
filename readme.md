@@ -162,7 +162,7 @@ This project is licensed under the MIT License - see the [LICENSE](license-url) 
 ## 🌍 Community & Support
 Join our Discord server for support and discussions:
 
-[![Support Server](https://img.shields.io/discord/942117923001098260.svg?style=for-the-badge&logo=discord&colorB=7289DA)](https://discord.gg/nvcznzhkTF)
+[![Support Server](https://img.shields.io/discord/942117923001098260.svg?style=for-the-badge&logo=discord&colorB=7289DA)](support-server)
 
 
 [npm-url]: https://img.shields.io/github/package-json/v/LucasB25/panaiscard?style=for-the-badge
@@ -170,5 +170,5 @@ Join our Discord server for support and discussions:
 [forks-url]: https://github.com/LucasB25/panaiscard/network/members
 [stars-url]: https://github.com/LucasB25/panaiscard/stargazers
 [issues-url]: https://github.com/LucasB25/panaiscard/issues
-[license-url]: https://github.com/LucasB25/panaiscard/blob/mains/LICENSE
+[license-url]: https://github.com/LucasB25/panaiscard/blob/main/LICENSE
 [support-server]: https://discord.gg/nvcznzhkTF
