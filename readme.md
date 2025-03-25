@@ -2,16 +2,14 @@
   <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=PanaisCard&fontSize=80&fontAlignY=35&animation=twinkling&fontColor=gradient" />
 </p>
 
-<p align="center">
-  <a href="version-url"><img src="https://img.shields.io/github/package-json/v/LucasB25/panaiscard?style=for-the-badge" alt="Version" /></a>
-  <a href="https://www.npmjs.com/package/panaiscard"><img src="https://img.shields.io/npm/v/panaiscard.svg?maxAge=3600&style=for-the-badge" alt="NPM version" /></a>
-  <a href="contributors-url"><img src="https://img.shields.io/github/contributors/LucasB25/panaiscard.svg?style=for-the-badge" alt="Contributors" /></a>
-  <a href="forks-url"><img src="https://img.shields.io/github/forks/LucasB25/panaiscard.svg?style=for-the-badge" alt="Forks" /></a>
-  <a href="stars-url"><img src="https://img.shields.io/github/stars/LucasB25/panaiscard.svg?style=for-the-badge" alt="Stars" /></a>
-  <a href="issues-url"><img src="https://img.shields.io/github/issues/LucasB25/panaiscard.svg?style=for-the-badge" alt="Issues" /></a>
-  <a href="support-server"><img src="https://img.shields.io/discord/942117923001098260.svg?style=for-the-badge&logo=discord&colorB=7289DA" alt="Support Server" /></a>
-  <a href="license-url"><img src="https://img.shields.io/github/license/LucasB25/panaiscard.svg?style=for-the-badge" alt="License" /></a>
-</p>
+[![Version][version-shield]](version-url)
+[![NPM][npm-shield]][npm-url]
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![Support Server][support-shield]][support-server]
+[![MIT License][license-shield]][license-url]
 
 ---
 
@@ -157,18 +155,21 @@ Thanks to these amazing contributors:
 </a>
 
 ## 📜 License
-This project is licensed under the MIT License - see the [LICENSE](license-url) file for details.
-
-## 🌍 Community & Support
-Join our Discord server for support and discussions:
-
-[![Support Server](https://img.shields.io/discord/942117923001098260.svg?style=for-the-badge&logo=discord&colorB=7289DA)](support-server)
+This project is licensed under the MIT License - see the [![MIT License][license-shield]][license-url] file for details.
 
 
-[npm-url]: https://img.shields.io/github/package-json/v/LucasB25/panaiscard?style=for-the-badge
+[version-shield]: https://img.shields.io/github/package-json/v/LucasB25/panaiscard?style=for-the-badge
+[npm-shield]: https://img.shields.io/npm/v/panaiscard.svg?maxAge=3600&style=for-the-badge
+[npm-url]: https://www.npmjs.com/package/panaiscard
+[contributors-shield]: https://img.shields.io/github/contributors/LucasB25/panaiscard.svg?style=for-the-badge
 [contributors-url]: https://github.com/LucasB25/panaiscard/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/LucasB25/panaiscard.svg?style=for-the-badge
 [forks-url]: https://github.com/LucasB25/panaiscard/network/members
+[stars-shield]: https://img.shields.io/github/stars/LucasB25/panaiscard.svg?style=for-the-badge
 [stars-url]: https://github.com/LucasB25/panaiscard/stargazers
+[issues-shield]: https://img.shields.io/github/issues/LucasB25/panaiscard.svg?style=for-the-badge
 [issues-url]: https://github.com/LucasB25/panaiscard/issues
+[license-shield]: https://img.shields.io/github/license/LucasB25/panaiscard.svg?style=for-the-badge
 [license-url]: https://github.com/LucasB25/panaiscard/blob/main/LICENSE
 [support-server]: https://discord.gg/nvcznzhkTF
+[support-shield]: https://img.shields.io/discord/942117923001098260.svg?style=for-the-badge&logo=discord&colorB=7289DA
