@@ -17,7 +17,7 @@
 
 <h1 align="center">🎵 PanaisCard 🎵</h1>
 
-<p align="center">A powerful Node.js package to generate stunning music cards for Discord bots, websites, and applications.</p>
+<p align="center">A powerful Node.js package to generate stunning music cards for Discord bots</p>
 
 ## 🚀 Installation
 

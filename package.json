@@ -1,7 +1,7 @@
 {
     "name": "panaiscard",
     "version": "0.1.0",
-    "description": "A powerful Node.js package to generate stunning music cards for Discord bots, websites, and applications.",
+    "description": "A powerful Node.js package to generate stunning music cards for Discord bots",
     "main": "dist/index.js",
     "module": "dist/index.mjs",
     "types": "dist/index.d.ts",
@@ -46,8 +46,7 @@
         "@biomejs/biome": "^1.9.4",
         "@types/node": "^22.13.13",
         "tsup": "^8.4.0",
-        "typescript": "^5.8.2",
-        "card": "github:LucasB25/card"
+        "typescript": "^5.8.2"
     },
     "repository": {
         "type": "git",
