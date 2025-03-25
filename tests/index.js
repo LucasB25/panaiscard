@@ -1,4 +1,4 @@
-const { Classic } = require('card');
+const { Classic } = require('panaiscard');
 const fs = require('fs');
 
 Classic({

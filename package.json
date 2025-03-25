@@ -46,7 +46,8 @@
         "@biomejs/biome": "^1.9.4",
         "@types/node": "^22.13.13",
         "tsup": "^8.4.0",
-        "typescript": "^5.8.2"
+        "typescript": "^5.8.2",
+        "panaiscard": "^0.1.0"
     },
     "repository": {
         "type": "git",

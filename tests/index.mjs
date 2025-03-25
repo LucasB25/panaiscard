@@ -1,4 +1,4 @@
-import { Classic } from 'card';
+import { Classic } from 'panaiscard';
 import fs from 'fs';
 
 const cardOptions = {
