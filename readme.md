@@ -88,55 +88,88 @@ const { Classic } = require('panaiscard');
 const fs = require('fs');
 
 const panaiscard = await Classic({
-    thumbnailImage: 'https://example.com/image.png',
+    thumbnailImage: 'https://hiphopcorner.fr/wp-content/uploads/2016/05/image-eminem-cover-album-marshall-mathers-lp.jpg',
     backgroundColor: '#070707',
     progress: 10,
     progressColor: '#FF7A00',
-    name: 'Song Title',
-    author: 'Artist Name',
+    progressBarColor: '#5F2D00',
+    title: 'Without Me',
+    titleColor: '#FF7A00',
+    author: 'Eminem',
+    authorColor: '#696969',
+    startTime: '0:00',
+    endTime: '4:00',
+    timeColor: '#FF7A00',
+});
+
+fs.writeFileSync('panaiscard.png', panaiscard);
+```
+
+### 🔹 ClassicPro
+![classicpro](images/ClassicPro.png)
+
+```js
+const { ClassicPro } = require('panaiscard');
+const fs = require('fs');
+
+const panaiscard = await ClassicPro({
+    thumbnailImage: 'https://hiphopcorner.fr/wp-content/uploads/2016/05/image-eminem-cover-album-marshall-mathers-lp.jpg',
+    backgroundColor: '#070707',
+    progress: 10,
+    progressColor: '#FF7A00',
+    progressBarColor: '#5F2D00',
+    title: 'Without Me',
+    titleColor: '#FF7A00',
+    author: 'Eminem',
+    authorColor: '#696969',
+    startTime: '0:00',
+    endTime: '4:00',
+    timeColor: '#FF7A00',
 });
 
 fs.writeFileSync('panaiscard.png', panaiscard);
 ```
 
 ### 🔹 Dynamic
-![dynamic](https://ik.imagekit.io/LucasB25/Dynamic.svg)
+![dynamic](images/Dynamic.png)
 
 ```js
 const { Dynamic } = require('panaiscard');
 const fs = require('fs');
 
 const panaiscard = await Dynamic({
-    thumbnailImage: 'https://example.com/image.png',
+    thumbnailImage: 'https://hiphopcorner.fr/wp-content/uploads/2016/05/image-eminem-cover-album-marshall-mathers-lp.jpg',
     backgroundColor: '#070707',
     progress: 10,
     progressColor: '#FF7A00',
-    name: 'Song Title',
-    author: 'Artist Name',
+    progressBarColor: '#5F2D00',
+    title: 'Without Me',
+    titleColor: '#FF7A00',
+    author: 'Eminem',
+    authorColor: '#696969',
 });
 
 fs.writeFileSync('panaiscard.png', panaiscard);
 ```
 
 ### 🔹 Mini
-![mini](https://ik.imagekit.io/LucasB25/Mini.svg)
+![mini](images/mini.png)
 
 ```js
 const { Mini } = require('panaiscard');
 const fs = require('fs');
 
-const panaiscard = await Mini({
-    thumbnailImage: 'https://example.com/image.png',
-    backgroundColor: '#070707',
-    progress: 10,
-    menuColor: '#FF7A00',
+const musicard = await Mini({
+    thumbnailImage: 'https://hiphopcorner.fr/wp-content/uploads/2016/05/image-eminem-cover-album-marshall-mathers-lp.jpg',
+    backgroundImage: fs.readFileSync('bg.png'),
+    imageDarkness: 70,
+    author: 'Testing by UG',
+    title: 'Bad Boy (feat. Luana Kiara)',
+    trackIndexBackgroundRadii: [10, 20, 30, 40, 50, 60, 70, 80, 80, 100],
 });
 
 fs.writeFileSync('panaiscard.png', panaiscard);
 ```
-
-## 🎯 Upcoming Features
-Stay tuned for more themes and customization options! 🚀
 
 ## 🤝 Contributing
 Want to improve PanaisCard? Follow these steps:

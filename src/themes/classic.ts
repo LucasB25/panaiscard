@@ -15,7 +15,7 @@ registerFont('PlusJakartaSans-SemiBold.ttf', 'semibold');
 
 const Classic = async (option: ClassicOption): Promise<Buffer> => {
 	if (!option.progress) option.progress = 0;
-	if (!option.name) option.name = 'Panaiscard';
+	if (!option.title) option.title = 'Panaiscard';
 	if (!option.author) option.author = 'By LucasB25';
 	if (!option.startTime) option.startTime = '0:00';
 	if (!option.endTime) option.endTime = '0:00';
@@ -23,7 +23,7 @@ const Classic = async (option: ClassicOption): Promise<Buffer> => {
 	if (!option.progressBarColor) option.progressBarColor = '#5F2D00';
 	if (!option.progressColor) option.progressColor = '#FF7A00';
 	if (!option.backgroundColor) option.backgroundColor = '#070707';
-	if (!option.nameColor) option.nameColor = '#FF7A00';
+	if (!option.titleColor) option.titleColor = '#FF7A00';
 	if (!option.authorColor) option.authorColor = '#FFFFFF';
 	if (!option.timeColor) option.timeColor = '#FFFFFF';
 	if (!option.imageDarkness) option.imageDarkness = 10;
@@ -72,8 +72,8 @@ const Classic = async (option: ClassicOption): Promise<Buffer> => {
 		option.imageDarkness = 100;
 	}
 
-	if (option.name.length > 18) {
-		option.name = `${option.name.slice(0, 18)}...`;
+	if (option.title.length > 18) {
+		option.title = `${option.title.slice(0, 18)}...`;
 	}
 
 	if (option.author.length > 18) {
@@ -153,8 +153,8 @@ const Classic = async (option: ClassicOption): Promise<Buffer> => {
 
 		const progressBarSvg =
 			generateSvg(`<svg width="1342" height="76" viewBox="0 0 1342 76" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect y="13" width="1342" height="47" rx="20" fill="${option.progressBarColor}"/>
-        <rect y="13" width="${completed}" height="47" rx="20" fill="${option.progressColor}"/>
+        <rect y="13" width="1342" height="47" rx="25" fill="${option.progressBarColor}"/>
+        <rect y="13" width="${completed}" height="47" rx="25" fill="${option.progressColor}"/>
         <rect x="${completed - 40}" y="3" width="69.4422" height="69.4422" rx="34.7211" fill="${option.progressColor}" stroke="${option.backgroundColor}" stroke-width="6"/>
         </svg>`);
 
@@ -162,12 +162,16 @@ const Classic = async (option: ClassicOption): Promise<Buffer> => {
 
 		ctx.drawImage(progressBar, 113, 635);
 
-		ctx.fillStyle = `${option.nameColor}`;
+		ctx.fillStyle = `${option.titleColor}`;
 		ctx.font = '124px extrabold';
-		ctx.fillText(option.name, 113, 230);
+		ctx.shadowColor = 'rgba(0, 0, 0, 0.7)';
+		ctx.shadowBlur = 10;
+		ctx.fillText(option.title, 113, 230);
 
 		ctx.fillStyle = `${option.authorColor}`;
 		ctx.font = '87px regular';
+		ctx.shadowColor = 'rgba(0, 0, 0, 0.7)';
+		ctx.shadowBlur = 10;
 		ctx.fillText(option.author, 113, 370);
 
 		ctx.fillStyle = `${option.timeColor}`;

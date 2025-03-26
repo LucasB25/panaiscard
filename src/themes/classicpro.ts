@@ -2,11 +2,20 @@ import { createCanvas, type Image, loadImage } from '@napi-rs/canvas';
 import { cropImage } from 'cropify';
 
 import { generateSvg } from '../functions/generateSvg.js';
+import { registerFont } from '../functions/registerFont.js';
 import type { ClassicProOption } from '../typings/types.js';
+
+registerFont('PlusJakartaSans-Bold.ttf', 'bold');
+registerFont('PlusJakartaSans-ExtraBold.ttf', 'extrabold');
+registerFont('PlusJakartaSans-ExtraLight.ttf', 'extralight');
+registerFont('PlusJakartaSans-Light.ttf', 'light');
+registerFont('PlusJakartaSans-Medium.ttf', 'medium');
+registerFont('PlusJakartaSans-Regular.ttf', 'regular');
+registerFont('PlusJakartaSans-SemiBold.ttf', 'semibold');
 
 const ClassicPro = async (option: ClassicProOption): Promise<Buffer> => {
 	if (!option.progress) option.progress = 0;
-	if (!option.name) option.name = 'Panaiscard';
+	if (!option.title) option.title = 'Panaiscard';
 	if (!option.author) option.author = 'By LucasB25';
 	if (!option.startTime) option.startTime = '0:00';
 	if (!option.endTime) option.endTime = '0:00';
@@ -14,7 +23,7 @@ const ClassicPro = async (option: ClassicProOption): Promise<Buffer> => {
 	if (!option.progressBarColor) option.progressBarColor = '#5F2D00';
 	if (!option.progressColor) option.progressColor = '#FF7A00';
 	if (!option.backgroundColor) option.backgroundColor = '#070707';
-	if (!option.nameColor) option.nameColor = '#FF7A00';
+	if (!option.titleColor) option.titleColor = '#FF7A00';
 	if (!option.authorColor) option.authorColor = '#FFFFFF';
 	if (!option.timeColor) option.timeColor = '#FFFFFF';
 	if (!option.imageDarkness) option.imageDarkness = 10;
@@ -57,8 +66,8 @@ const ClassicPro = async (option: ClassicProOption): Promise<Buffer> => {
 		option.progress = 100;
 	}
 
-	if (option.name.length > 12) {
-		option.name = `${option.name.slice(0, 12)}...`;
+	if (option.title.length > 12) {
+		option.title = `${option.title.slice(0, 12)}...`;
 	}
 
 	if (option.author.length > 12) {
@@ -73,7 +82,13 @@ const ClassicPro = async (option: ClassicProOption): Promise<Buffer> => {
 			try {
 				const darknessSvg =
 					generateSvg(`<svg width="1252" height="708" viewBox="0 0 1252 708" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="1252" height="708" rx="50" fill="#070707" fill-opacity="${option.imageDarkness / 100}"/>
+                <rect width="1252" height="708" rx="50" fill="url(#grad1)" fill-opacity="${option.imageDarkness / 100}"/>
+                <defs>
+                    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:${option.backgroundColor};stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#000000;stop-opacity:0.6" />
+                    </linearGradient>
+                </defs>
                 </svg>`);
 
 				const image = await cropImage({
@@ -122,12 +137,16 @@ const ClassicPro = async (option: ClassicProOption): Promise<Buffer> => {
 
 		ctx.drawImage(progressBar, 87, 490);
 
-		ctx.fillStyle = `${option.nameColor}`;
+		ctx.fillStyle = `${option.titleColor}`;
 		ctx.font = '90px extrabold';
-		ctx.fillText(option.name, 486, 240);
+		ctx.shadowColor = 'rgba(0, 0, 0, 0.7)';
+		ctx.shadowBlur = 10;
+		ctx.fillText(option.title, 486, 240);
 
 		ctx.fillStyle = `${option.authorColor}`;
-		ctx.font = '60px semibold';
+		ctx.font = '60px regular';
+		ctx.shadowColor = 'rgba(0, 0, 0, 0.7)';
+		ctx.shadowBlur = 10;
 		ctx.fillText(option.author, 486, 330);
 
 		ctx.fillStyle = `${option.timeColor}`;

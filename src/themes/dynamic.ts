@@ -2,17 +2,26 @@ import { createCanvas, loadImage, type Image } from '@napi-rs/canvas';
 import { cropImage } from 'cropify';
 
 import { generateSvg } from '../functions/generateSvg.js';
+import { registerFont } from '../functions/registerFont.js';
 import type { DynamicOption } from '../typings/types.js';
+
+registerFont('PlusJakartaSans-Bold.ttf', 'bold');
+registerFont('PlusJakartaSans-ExtraBold.ttf', 'extrabold');
+registerFont('PlusJakartaSans-ExtraLight.ttf', 'extralight');
+registerFont('PlusJakartaSans-Light.ttf', 'light');
+registerFont('PlusJakartaSans-Medium.ttf', 'medium');
+registerFont('PlusJakartaSans-Regular.ttf', 'regular');
+registerFont('PlusJakartaSans-SemiBold.ttf', 'semibold');
 
 const Dynamic = async (option: DynamicOption): Promise<Buffer> => {
 	if (!option.progress) option.progress = 0;
-	if (!option.name) option.name = 'Panaiscard';
+	if (!option.title) option.title = 'Panaiscard';
 	if (!option.author) option.author = 'By LucasB25';
 
 	if (!option.progressBarColor) option.progressBarColor = '#5F2D00';
 	if (!option.progressColor) option.progressColor = '#FF7A00';
 	if (!option.backgroundColor) option.backgroundColor = '#070707';
-	if (!option.nameColor) option.nameColor = '#FF7A00';
+	if (!option.titleColor) option.titleColor = '#FF7A00';
 	if (!option.authorColor) option.authorColor = '#FFFFFF';
 	if (!option.imageDarkness) option.imageDarkness = 10;
 
@@ -54,8 +63,8 @@ const Dynamic = async (option: DynamicOption): Promise<Buffer> => {
 		option.progress = 99.999;
 	}
 
-	if (option.name.length > 20) {
-		option.name = `${option.name.slice(0, 20)}...`;
+	if (option.title.length > 20) {
+		option.title = `${option.title.slice(0, 20)}...`;
 	}
 
 	if (option.author.length > 20) {
@@ -129,9 +138,9 @@ const Dynamic = async (option: DynamicOption): Promise<Buffer> => {
 		ctx.strokeStyle = option.progressColor;
 		ctx.stroke();
 
-		ctx.fillStyle = `${option.nameColor}`;
+		ctx.fillStyle = `${option.titleColor}`;
 		ctx.font = '100px extrabold';
-		ctx.fillText(option.name, 550, 240);
+		ctx.fillText(option.title, 550, 240);
 
 		ctx.fillStyle = `${option.authorColor}`;
 		ctx.font = '70px semibold';

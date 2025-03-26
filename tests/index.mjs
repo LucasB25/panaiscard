@@ -18,7 +18,7 @@ async function generateCard() {
         const imageBuffer = await Classic(cardOptions);
 
         fs.writeFileSync('output.png', imageBuffer);
-        console.log('✅ Music card generated successfully: output.png');
+        console.log('✅ Card generated successfully: output.png');
 
     } catch (error) {
         console.error('❌ Error generating music card:', error);
