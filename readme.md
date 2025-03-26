@@ -153,7 +153,7 @@ fs.writeFileSync('panaiscard.png', panaiscard);
 ```
 
 ### 🔹 Mini
-![mini](images/mini.png)
+![mini](images/Mini.png)
 
 ```js
 const { Mini } = require('panaiscard');
