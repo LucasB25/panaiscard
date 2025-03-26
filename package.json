@@ -1,6 +1,6 @@
 {
     "name": "panaiscard",
-    "version": "0.1.0",
+    "version": "0.1.50",
     "description": "A powerful Node.js package to generate stunning music cards for Discord bots",
     "main": "dist/index.js",
     "module": "dist/index.mjs",
