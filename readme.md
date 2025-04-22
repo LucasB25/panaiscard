@@ -152,14 +152,14 @@ const panaiscard = await Dynamic({
 fs.writeFileSync('panaiscard.png', panaiscard);
 ```
 
-### 🔹 Mini
-![mini](images/Mini.png)
+### 🔹 Card
+![card](images/card.png)
 
 ```js
-const { Mini } = require('panaiscard');
+const { Card } = require('panaiscard');
 const fs = require('fs');
 
-const musicard = await Mini({
+const musicard = await Card({
     thumbnailImage: 'https://hiphopcorner.fr/wp-content/uploads/2016/05/image-eminem-cover-album-marshall-mathers-lp.jpg',
     backgroundImage: fs.readFileSync('bg.png'),
     imageDarkness: 70,

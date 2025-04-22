@@ -3,7 +3,7 @@ import { cropImage } from 'cropify';
 
 import { generateSvg } from '../functions/generateSvg.js';
 import { registerFont } from '../functions/registerFont.js';
-import type { MiniOption } from '../typings/types.js';
+import type { CardOption } from '../typings/types.js';
 
 registerFont('PlusJakartaSans-Bold.ttf', 'bold');
 registerFont('PlusJakartaSans-ExtraBold.ttf', 'extrabold');
@@ -13,7 +13,7 @@ registerFont('PlusJakartaSans-Medium.ttf', 'medium');
 registerFont('PlusJakartaSans-Regular.ttf', 'regular');
 registerFont('PlusJakartaSans-SemiBold.ttf', 'semibold');
 
-const Mini = async (options: MiniOption): Promise<Buffer> => {
+const Card = async (options: CardOption): Promise<Buffer> => {
 	if (!options.title) options.title = 'Panaiscard';
 	if (!options.titleColor) options.titleColor = '#d0d5d6';
 	if (!options.author) options.author = 'By LucasB25';
@@ -159,4 +159,4 @@ const Mini = async (options: MiniOption): Promise<Buffer> => {
 	}
 };
 
-export { Mini };
+export { Card };

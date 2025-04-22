@@ -41,10 +41,10 @@
     "license": "GPL-3.0-only",
     "devDependencies": {
         "@biomejs/biome": "^1.9.4",
-        "@types/node": "^22.13.13",
+        "@types/node": "^22.14.1",
         "tsup": "^8.4.0",
-        "typescript": "^5.8.2",
-        "panaiscard": "^0.1.0"
+        "typescript": "^5.8.3",
+        "panaiscard": "^0.1.50"
     },
     "repository": {
         "type": "git",
@@ -54,7 +54,7 @@
         "url": "https://github.com/LucasB25/panaiscard/issues"
     },
     "dependencies": {
-        "@napi-rs/canvas": "^0.1.68",
+        "@napi-rs/canvas": "^0.1.69",
         "cropify": "latest"
     },
     "directories": {

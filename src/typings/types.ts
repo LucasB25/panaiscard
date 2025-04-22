@@ -48,7 +48,7 @@ export type DynamicOption = {
 	authorColor?: string;
 };
 
-export type MiniOption = {
+export type CardOption = {
 	title: string;
 	titleColor?: string;
 	author: string;
