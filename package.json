@@ -1,64 +1,68 @@
 {
     "name": "panaiscard",
-    "version": "0.1.50",
+    "version": "0.1.60",
     "description": "A powerful Node.js package to generate stunning music cards for Discord bots",
     "main": "dist/index.js",
     "module": "dist/index.mjs",
     "types": "dist/index.d.ts",
     "exports": {
-        ".": {
-            "require": "./dist/index.js",
-            "import": "./dist/index.mjs",
-            "types": "./dist/index.d.ts"
-        }
+      ".": {
+        "require": "./dist/index.js",
+        "import": "./dist/index.mjs",
+        "types": "./dist/index.d.ts"
+      },
+      "./fonts/*": "./fonts/*"
     },
     "files": [
-        "dist",
-        "fonts"
+      "dist",
+      "fonts"
     ],
     "scripts": {
-        "build": "tsup",
-        "test:m": "cd tests && node index.mjs",
-        "test:c": "cd tests && node index.js",
-        "lint": "biome lint --write src/",
-        "format": "biome format --write src/"
+      "build": "tsup",
+      "test:module": "cd tests && node index.mjs",
+      "test:commonjs": "cd tests && node index.js",
+      "lint": "biome lint --write src/",
+      "format": "biome format --write src/"
     },
     "keywords": [
-        "musicard",
-        "music-card",
-        "discord-music-card",
-        "music-card-discord",
-        "discord.js",
-        "spotify",
-        "youtube",
-        "image",
-        "node-canvas",
-        "canvas-constructor",
-        "discord",
-        "discord-canvas"
+      "musicard",
+      "music-card",
+      "discord-music-card",
+      "music-card-discord",
+      "discord.js",
+      "spotify",
+      "youtube",
+      "image",
+      "node-canvas",
+      "canvas-constructor",
+      "discord",
+      "discord-canvas"
     ],
     "author": "LucasB25",
     "license": "GPL-3.0-only",
-    "devDependencies": {
-        "@biomejs/biome": "^1.9.4",
-        "@types/node": "^22.14.1",
-        "tsup": "^8.4.0",
-        "typescript": "^5.8.3",
-        "panaiscard": "^0.1.50"
-    },
     "repository": {
-        "type": "git",
-        "url": "git+https://github.com/LucasB25/panaiscard.git"
+      "type": "git",
+      "url": "git+https://github.com/LucasB25/panaiscard.git"
     },
     "bugs": {
-        "url": "https://github.com/LucasB25/panaiscard/issues"
+      "url": "https://github.com/LucasB25/panaiscard/issues"
+    },
+    "homepage": "https://github.com/LucasB25/panaiscard#readme",
+    "engines": {
+      "node": ">=18"
+    },
+    "devDependencies": {
+      "@biomejs/biome": "^1.9.4",
+      "@types/node": "^22.14.1",
+      "tsup": "^8.4.0",
+      "typescript": "^5.8.3"
     },
     "dependencies": {
-        "@napi-rs/canvas": "^0.1.69",
-        "cropify": "latest"
+      "@napi-rs/canvas": "^0.1.69",
+      "cropify": "latest"
     },
     "directories": {
-        "test": "tests"
-    },
-    "homepage": "https://github.com/LucasB25/panaiscard#readme"
-}
+      "test": "tests"
+    }
+  }
+  

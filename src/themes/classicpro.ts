@@ -14,7 +14,7 @@ registerFont('PlusJakartaSans-Regular.ttf', 'regular');
 registerFont('PlusJakartaSans-SemiBold.ttf', 'semibold');
 
 const ClassicPro = async (option: ClassicProOption): Promise<Buffer> => {
-	if (!option.progress) option.progress = 0;
+	if (!option.progress) option.progress = 3.6;
 	if (!option.title) option.title = 'Panaiscard';
 	if (!option.author) option.author = 'By LucasB25';
 	if (!option.startTime) option.startTime = '0:00';

@@ -14,7 +14,7 @@ registerFont('PlusJakartaSans-Regular.ttf', 'regular');
 registerFont('PlusJakartaSans-SemiBold.ttf', 'semibold');
 
 const Dynamic = async (option: DynamicOption): Promise<Buffer> => {
-	if (!option.progress) option.progress = 0;
+	if (!option.progress) option.progress = 0.618;
 	if (!option.title) option.title = 'Panaiscard';
 	if (!option.author) option.author = 'By LucasB25';
 

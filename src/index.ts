@@ -1,5 +1,8 @@
-export * from './typings/types.js';
-export * from './themes/classic.js';
-export * from './themes/classicpro.js';
-export * from './themes/dynamic.js';
-export * from './themes/card.js';
+// Types
+export * from './typings/types';
+
+// Themes
+export { Classic } from './themes/classic';
+export { ClassicPro } from './themes/classicpro';
+export { Dynamic } from './themes/dynamic';
+export { Card } from './themes/card';
